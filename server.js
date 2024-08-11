@@ -14,6 +14,10 @@ app.use("/api", taskRouter);
 
 connectDB();
 
+app.get("/", async (req, res) => {
+  res.json(" welcome ");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`Sever connected htpp://localhost:${process.env.PORT}`);
 });
